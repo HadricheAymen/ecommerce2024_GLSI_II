@@ -19,4 +19,4 @@ Route::middleware('api')->group(function () {
 });
 
 Route::get('/listarticles/{idscat}', [ArticleController::class, 'showArticlesbySCAT']);
-Route::get('/articles/art/articlespaginate', [ArticleController::class, 'articlesPaginate']);
+Route::get('/articles/art/pagination', [ArticleController::class, 'articlesPaginate']);
