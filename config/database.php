@@ -98,6 +98,7 @@ return [
         ],
 
         'sqlsrv' => [
+          
             'driver' => 'sqlsrv',
             'url' => env('DB_URL'),
             'host' => env('DB_HOST', 'localhost'),

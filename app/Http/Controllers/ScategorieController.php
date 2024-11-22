@@ -13,11 +13,11 @@ class ScategorieController extends Controller
     public function index()
     {
         try {
-            //$scategories=Scategorie::with('categories')->get();
-            $scategories=Scategorie::all()->with('categories');
+            $scategories=Scategorie::with('categories')->get();
+            // $scategories=Scategorie::all()->with('categories');
             return response()->json($scategories,status:200);
         } catch (\Exception $e) {
-            return response()->json(["message" => "probleme de récuperation des categories","error" => $e->getMessage()]);
+            return response()->json(["message" => "probleme de récuperation des sous categories","error" => $e->getMessage()]);
         }
     }
 
